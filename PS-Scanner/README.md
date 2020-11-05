@@ -1,6 +1,6 @@
-## Stephen Alex Ngo
+# Stephen Alex Ngo
 
 ## Main Class Destination
 - PS-Scanner > src > Main.java
 
-How my program works
+## How my program works
