@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 
 class TokenIdentifier{
 
@@ -37,7 +38,7 @@ class TokenIdentifier{
                     case 'R': return q2;
                     case 'D': return q7;
                     default: return garb;
-            } // not fix below
+            }
             case q1: 
                 switch (character) {
                     case 'F': return q2;
@@ -201,28 +202,31 @@ public class Main {
     public static void main(String[] args) throws Exception {
         File file = new File("inputfile.txt");
         FileReader fr = new FileReader(file);
+        FileWriter fw = new FileWriter("output.txt");
         BufferedReader br = new BufferedReader(fr);
         String line;
 
         while( (line = br.readLine()) != null){
             String[] arr = line.replace(",", "").split(" ");
             int curr = 0;
-
+            
             for (String word : arr){
                 if(!word.equals("")){
                     Token tk = new Token(word);
-                    // FILE OUTPUT DAPAT TESTING
+                    
                     if(curr == 0)
-                        System.out.print(tk.tokentype);
+                        fw.append(tk.tokentype.toString());
                     else
-                        System.out.print(" " + tk.tokentype);
+                        fw.append(" " + tk.tokentype.toString());
+                    
                 }
                 curr++;
             }
 
-            System.out.println("");
+            fw.append("\n");
         }
 
         fr.close();
+        fw.close();
     }
 }
