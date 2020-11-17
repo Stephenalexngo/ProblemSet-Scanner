@@ -35,19 +35,105 @@ class TokenIdentifier{
                     case '$': return q1;
                     case 'F': return q2;
                     case 'R': return q2;
+                    case 'D': return q7;
                     default: return garb;
             } // not fix below
             case q1: 
                 switch (character) {
-                    case '0': return q2;
-                    case '1': return q0;
-                    default: return q3;
+                    case 'F': return q2;
+                    case 'R': return q2;
+                    case '0': return q4;
+                    case '1': return q5;
+                    case '2': return q5;
+                    case '3': return q3;
+                    case '4': return q4;
+                    case '5': return q4;
+                    case '6': return q4;
+                    case '7': return q4;
+                    case '8': return q4;
+                    case '9': return q4;
+                    default: return garb;
             }
             case q2: 
                 switch (character) {
-                    case '0': return q1;
-                    case '1': return q2;
-                    default: return q3;
+                    case '0': return q4;
+                    case '1': return q5;
+                    case '2': return q5;
+                    case '3': return q3;
+                    case '4': return q4;
+                    case '5': return q4;
+                    case '6': return q4;
+                    case '7': return q4;
+                    case '8': return q4;
+                    case '9': return q4;
+                    default: return garb;
+            }
+            case q3: 
+                switch (character) {
+                    case '0': return q4;
+                    case '1': return q4;
+                    default: return garb;
+            }
+            case q5: 
+                switch (character) {
+                    case '0': return q6;
+                    case '1': return q6;
+                    case '2': return q6;
+                    case '3': return q6;
+                    case '4': return q6;
+                    case '5': return q6;
+                    case '6': return q6;
+                    case '7': return q6;
+                    case '8': return q6;
+                    case '9': return q6;
+                    default: return garb;
+            }
+            case q7: 
+                switch (character) {
+                    case 'A': return q13;
+                    case 'M': return q8;
+                    default: return garb;
+            }
+            case q8: 
+                switch (character) {
+                    case 'U': return q9;
+                    default: return garb;
+            }
+            case q9: 
+                switch (character) {
+                    case 'L': return q10;
+                    default: return garb;
+            }
+            case q10: 
+                switch (character) {
+                    case 'T': return q11;
+                    default: return garb;
+            }
+            case q11: 
+                switch (character) {
+                    case 'U': return q12;
+                    default: return garb;
+            }
+            case q13: 
+                switch (character) {
+                    case 'D': return q14;
+                    default: return garb;
+            }
+            case q14: 
+                switch (character) {
+                    case 'D': return q15;
+                    default: return garb;
+            }
+            case q15: 
+                switch (character) {
+                    case 'I': return q16;
+                    case 'U': return q17;
+                    default: return garb;
+            }
+            case q16: 
+                switch (character) {
+                    case 'U': return q17;
+                    default: return garb;
             }
             default: 
                 return garb;
