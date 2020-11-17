@@ -218,7 +218,6 @@ public class Main {
                         fw.append(tk.tokentype.toString());
                     else
                         fw.append(" " + tk.tokentype.toString());
-                    
                 }
                 curr++;
             }
@@ -228,5 +227,7 @@ public class Main {
 
         fr.close();
         fw.close();
+
+        System.out.println("Successful Tokenization");
     }
 }
