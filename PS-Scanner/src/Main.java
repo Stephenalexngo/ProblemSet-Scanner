@@ -42,7 +42,6 @@ class TokenIdentifier{
             case q1: 
                 switch (character) {
                     case 'F': return q2;
-                    case 'R': return q2;
                     case '0': return q4;
                     case '1': return q5;
                     case '2': return q5;
